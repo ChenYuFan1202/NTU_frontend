@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo list</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <h1 class="title">todo list</h1>
+
+      <section class="editor-card" aria-label="new todo form">
+        <div class="new-todo-row">
+          <input id="todoTitle" type="text" placeholder="new todo" />
+          <button id="addTodoButton" type="button">add</button>
+        </div>
+        <textarea id="todoDescription" placeholder="description"></textarea>
+      </section>
+
+      <section class="todo-list-card" aria-label="todo items">
+        <ul id="todoList"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+:root {
+  --bg: #e9e9d6;
+  --card: #f6f6f6;
+  --border: #666;
+  --line: #d9d9d9;
+  --delete: #e6564f;
+  --delete-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+}
+
+.app-shell {
+  height: 100vh;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.editor-card,
+.todo-list-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+}
+
+.editor-card {
+  padding: 14px;
+  flex-shrink: 0;
+}
+
+.new-todo-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.editor-card input[type="text"],
+.editor-card textarea,
+.editor-card button {
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  font-size: 29px;
+}
+
+.editor-card input[type="text"],
+.editor-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.editor-card textarea {
+  height: 95px;
+  resize: none;
+}
+
+.editor-card button {
+  min-width: 120px;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.todo-list-card {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.todo-main input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.todo-name {
+  flex: 1;
+  font-size: 31px;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: 6px;
+  background: var(--delete);
+  color: var(--delete-text);
+  font-size: 23px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.todo-description {
+  margin: 0;
+  padding: 0 14px 14px 48px;
+  font-size: 24px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .editor-card input[type="text"],
+  .editor-card textarea,
+  .editor-card button,
+  .todo-name,
+  .todo-description,
+  .delete-btn {
+    font-size: 20px;
+  }
+
+  .editor-card button {
+    min-width: 86px;
+  }
+
+  .todo-main input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
